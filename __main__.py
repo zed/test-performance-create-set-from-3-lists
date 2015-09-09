@@ -12,6 +12,8 @@ print("PYTHONHASHSEED=%d" % seed)
 for code in [
         'set(A+B+C)',
         'set(A).update(B, C)',
+        's = set(A); s.update(B, C)',
+        's = set(A); s.update(B, C); del s',
         'set(itertools.chain(A,B,C))']:
     print(code, end=': ')
     sys.stdout.flush()
